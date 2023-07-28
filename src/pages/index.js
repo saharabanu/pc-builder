@@ -1,9 +1,18 @@
-import React from 'react'
+import RootLayout from '@/components/Layout/RootLayout';
 
-const Homepage = () => {
+
+const HomePage = () => {
   return (
     <div> This is Homepage</div>
   )
 }
 
-export default Homepage
+export default HomePage;
+
+HomePage.getLayout = function getLayout(page) {
+  return (
+   <RootLayout>
+    {page}
+   </RootLayout>
+  )
+}
