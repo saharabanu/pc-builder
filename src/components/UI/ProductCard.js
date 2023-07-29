@@ -1,24 +1,28 @@
 import { Card } from 'antd';
+import Image from 'next/image';
 import Link from 'next/link';
 const { Meta } = Card;
 
-const ProductCard = () => {
+const ProductCard = ({product}) => {
   return (
     <div>
 
-  <Link href= "/">
+  <Link href= {`/products/${product?._id}`}>
   {/* href= {`/product/${news?.id}`} */}
   <Card
     hoverable
     style={{
       width: 240,
     }}
-    cover={<img alt="example" src="https://www.startech.com.bd/image/cache/catalog/monitor/msi/pro-mp242c/pro-mp242c-01-200x200.webp" />}
+    cover={<Image alt="example" src={product?.image} width={100} height={200}/>}
   >
-    <Meta title="Europe Street beat"  />
+    <Meta title={product?.ProductName}  />
     <div>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
-        <h5>$345</h5>
+        <p>{product?.Description} </p>
+        <span>{product?.Category}</span>
+        <span style={{color:"red", paddingLeft:"10px"}}>{product?.Status}</span>
+        <h5>{product?.Price}</h5>
+
     </div>
   </Card>
   </Link>
@@ -27,4 +31,4 @@ const ProductCard = () => {
   )
 }
 
-export default ProductCard
+export default ProductCard;

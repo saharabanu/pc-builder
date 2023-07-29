@@ -4,11 +4,11 @@ import FeaturedCategories from '@/components/UI/FeaturedCategories';
 import FeaturedProduct from '@/components/UI/FeaturedProduct';
 
 
-const HomePage = () => {
+const HomePage = ({products}) => {
   return (
     <> 
     <Banner/>
-    <FeaturedProduct/>
+    <FeaturedProduct products={products}/>
     <FeaturedCategories/>
     
     </>
@@ -24,3 +24,24 @@ HomePage.getLayout = function getLayout(page) {
    </RootLayout>
   )
 }
+
+
+export const getStaticProps = async () => {
+  const res = await fetch("http://localhost:3000/api/products");
+  const data = await res.json();
+
+  // Randomly select 6 products
+  function getRandomProducts(data, count) {
+    const shuffled = data.data.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+  }
+
+  const randomProducts = getRandomProducts(data, 6);
+
+  return {
+    props: {
+      products: randomProducts,
+    },
+    revalidate: 10,
+  };
+};

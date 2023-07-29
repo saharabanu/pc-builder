@@ -2,7 +2,7 @@ import { Col, Row } from "antd"
 import ProductCard from "./ProductCard"
 
 
-const FeaturedProduct = () => {
+const FeaturedProduct = ({products}) => {
   return (
     <div className="container-fluid">
 
@@ -12,10 +12,10 @@ const FeaturedProduct = () => {
 
 
     <Row gutter={[16, 16]}>
-  <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }} xl={{span:6}} ><ProductCard/></Col>
-  <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }} xl={{span:6}} ><ProductCard/></Col>
-  <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }} xl={{span:6}} ><ProductCard/></Col>
-  <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }} xl={{span:6}} ><ProductCard/></Col>
+    {products?.map((product,i) => (<>
+      <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }} xl={{span:6}} key={i}><ProductCard product={product}/></Col>
+    </>))}
+  
   
   
 </Row>
