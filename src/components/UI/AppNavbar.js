@@ -29,12 +29,12 @@ const AppNavbar = () => {
           <Col xs={20} sm={20} md={4}>
             <div
               className="logo"
-              style={{ color: "white", paddingLeft: "20px" }}
+              style={{ color: "white", paddingLeft: "20px", fontFamily:'Poppins' , fontSize:"30px", fontWeight:'700'}}
             >
-              My Logo
+              Tech
             </div>
           </Col>
-          <Col xs={0} sm={0} md={20}>
+          <Col xs={0} sm={0} md={10}>
             <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
             <Menu.Item key="home"  >
           <Link href="/">Home</Link>
@@ -66,14 +66,19 @@ const AppNavbar = () => {
             <Link href="/categories/others">Others</Link>
           </Menu.Item>
         </Menu.SubMenu>
-              <Menu.Item key="4">
+              {/* <Menu.Item key="4">
                 <Button type="primary" style={{ marginRight: "10px" }}>
                   Sign in
                 </Button>
                 
-              </Menu.Item>
+              </Menu.Item> */}
             </Menu>
           </Col>
+          {/* <Col xs={20} sm={20} md={1}>
+          <Button type="primary" style={{ marginRight: "10px" }}>
+                  Sign in
+                </Button>
+          </Col> */}
           <Col xs={2} sm={2} md={0}>
             <Button type="primary" onClick={showDrawer}>
               <MenuOutlined />

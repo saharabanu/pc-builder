@@ -4,6 +4,7 @@ const { Header, Content, Footer } = Layout;
 import React, { useState } from 'react';
 
 import AppNavbar from '../UI/AppNavbar';
+import FooterBottom from '../UI/FooterBottom';
 
 
 
@@ -18,11 +19,11 @@ const RootLayout = ({children}) => {
     
       <AppNavbar/>
     </Header>
-    <Content>
+    <Content style={{minHeight:"100vh"}}>
       {children}
     </Content>
     <Footer>
-      <p> This is Footer</p>
+      <FooterBottom/>
     </Footer>
 
     </Layout>

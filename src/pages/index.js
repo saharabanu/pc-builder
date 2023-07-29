@@ -1,9 +1,15 @@
 import RootLayout from '@/components/Layout/RootLayout';
+import Banner from '@/components/UI/Banner';
+import FeaturedProduct from '@/components/UI/FeaturedProduct';
 
 
 const HomePage = () => {
   return (
-    <div> This is Homepage</div>
+    <> 
+    <Banner/>
+    <FeaturedProduct/>
+    
+    </>
   )
 }
 
