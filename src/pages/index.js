@@ -1,5 +1,6 @@
 import RootLayout from '@/components/Layout/RootLayout';
 import Banner from '@/components/UI/Banner';
+import FeaturedCategories from '@/components/UI/FeaturedCategories';
 import FeaturedProduct from '@/components/UI/FeaturedProduct';
 
 
@@ -8,6 +9,7 @@ const HomePage = () => {
     <> 
     <Banner/>
     <FeaturedProduct/>
+    <FeaturedCategories/>
     
     </>
   )

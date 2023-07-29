@@ -12,10 +12,11 @@ const FeaturedProduct = () => {
 
 
     <Row gutter={[16, 16]}>
-  <Col span={6} ><ProductCard/></Col>
-  <Col span={6}>2</Col>
-  <Col span={6} >3</Col>
-  <Col span={6} >4</Col>
+  <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }} xl={{span:6}} ><ProductCard/></Col>
+  <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }} xl={{span:6}} ><ProductCard/></Col>
+  <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }} xl={{span:6}} ><ProductCard/></Col>
+  <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }} xl={{span:6}} ><ProductCard/></Col>
+  
   
 </Row>
 

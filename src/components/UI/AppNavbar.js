@@ -8,9 +8,11 @@ import {
   UserOutlined,
   
 } from "@ant-design/icons";
+import { useSession, signOut } from 'next-auth/react';
 
 const AppNavbar = () => {
   const [visible, setVisible] = useState(false);
+  const { data: session } = useSession()
 
   const showDrawer = () => {
     setVisible(true);
@@ -66,6 +68,18 @@ const AppNavbar = () => {
             <Link href="/categories/others">Others</Link>
           </Menu.Item>
         </Menu.SubMenu>
+        {session?.user ? <>
+          <Button type="primary" danger onClick={() => signOut()} style={{marginTop:'20px'   }}>
+            Logout
+          </Button>
+          <h2 style={{   }}>{session?.user?.name}</h2>
+          </>
+         : <Menu.Item key="login">
+          <Link href="/login">Login</Link>
+        </Menu.Item>}
+    
+
+        
               {/* <Menu.Item key="4">
                 <Button type="primary" style={{ marginRight: "10px" }}>
                   Sign in

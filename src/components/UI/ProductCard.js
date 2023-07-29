@@ -1,10 +1,13 @@
 import { Card } from 'antd';
+import Link from 'next/link';
 const { Meta } = Card;
 
 const ProductCard = () => {
   return (
     <div>
 
+  <Link href= "/">
+  {/* href= {`/product/${news?.id}`} */}
   <Card
     hoverable
     style={{
@@ -18,6 +21,7 @@ const ProductCard = () => {
         <h5>$345</h5>
     </div>
   </Card>
+  </Link>
 
     </div>
   )
