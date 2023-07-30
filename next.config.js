@@ -2,7 +2,17 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['assetsio.reedpopcdn.com',"previews.123rf.com","img.freepik.com",'miro.medium.com'],
+    domains: ["www.cloud.ryanscomputers.com","i.rtings.com","",
+    "cdn.mos.cms.futurecdn.net",
+    "c1.neweggimages.com",
+    "",
+    "",
+    "",
+    "",
+      
+      
+      
+      'assetsio.reedpopcdn.com',"previews.123rf.com","img.freepik.com",'miro.medium.com'],
   },
 }
 

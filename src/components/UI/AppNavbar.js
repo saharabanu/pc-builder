@@ -56,10 +56,10 @@ const AppNavbar = () => {
             <Link href="/categories/ram">RAM</Link>
           </Menu.Item>
           <Menu.Item key="psu">
-            <Link href="/categories/psu">Power Supply Unit</Link>
+            <Link href="/categories/powersupply">Power Supply Unit</Link>
           </Menu.Item>
           <Menu.Item key="storage">
-            <Link href="/categories/storage">Storage Device</Link>
+            <Link href="/categories/storagedevice">Storage Device</Link>
           </Menu.Item>
           <Menu.Item key="monitor">
             <Link href="/categories/monitor">Monitor</Link>

@@ -22,7 +22,7 @@ const RootLayout = ({children}) => {
     <Content style={{minHeight:"100vh"}}>
       {children}
     </Content>
-    <Footer>
+    <Footer style={{width:"100%", background:"#000" , padding: "5px ", textAlign:"center", color:"#fff", marginTop:"20px"}}>
       <FooterBottom/>
     </Footer>
 
