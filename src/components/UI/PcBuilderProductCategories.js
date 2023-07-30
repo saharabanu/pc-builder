@@ -1,3 +1,4 @@
+import { chooseSelectCategory } from "@/redux/features/builderSlice";
 import { Button, Col, Row } from "antd";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -41,16 +42,20 @@ const categories = [
   },
 ];
 const PcBuilderProductCategories = () => {
-const dispatch = useDispatch();
-const router = useRouter();
+  const dispatch = useDispatch();
+  const router = useRouter();
+
+  // redux state
   const builderState = useSelector((state) => state.builder.selectedProducts);
+  /// handle choose product function
   const handleChooseClick = (redirectUri, title) => {
     router.push(redirectUri);
     dispatch(chooseSelectCategory(title));
   };
 
-
+  // handle show product function
   const showChoosedProduct = (category) => {
+    console.log('clicked')
     if (category === "CPU") {
       return builderState["cpu"];
     } else if (category === "RAM") {
@@ -86,13 +91,44 @@ const router = useRouter();
                 borderRadius: "10px",
               }}
             >
-              <div style={{ display: "flex", alignItems: "center" , justifyContent:"space-between"}}>
-                <div style={{ display: "flex", alignItems: "center" , justifyContent:"space-between"}}>
+              <div
+                style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}
+              >
+                {/* display all categories products before choosing  */}
+                <div
+                  style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}
+                >
                   <Image width={50} height={50} src={category?.image} alt="category-img"></Image>
                   <p style={{ marginLeft: "10px" }}> {category?.title}</p>
                 </div>
+
+                {/* display all categories products after choosing  */}
+
                 <div>
-                    <Button onClick={()=> handleChooseClick(category?.href, category?.title)}>Choose</Button>
+                  {showChoosedProduct(category?.title) && (
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <Image
+                        width={50}
+                        height={50}
+                        src={showChoosedProduct(category?.title)?.image}
+                        alt="category-img"
+                      ></Image>
+                      <p style={{ marginLeft: "10px" }}> {showChoosedProduct(category?.title)?.ProductName}
+                      </p>
+                    </div>
+                  )}
+                </div>
+
+                <div>
+                  <Button onClick={() => handleChooseClick(category?.href, category?.title)}>
+                    {showChoosedProduct(category?.title) ? "Change" : "Choose"}
+                  </Button>
                 </div>
               </div>
             </div>
