@@ -29,23 +29,22 @@ const AppNavbar = () => {
 
 
 <Row justify="space-between" align="middle">
-          <Col xs={20} sm={20} md={4}>
+          <Col xs={20} sm={20} md={4} xl={12}>
+          
             <div
               className="logo"
               style={{ color: "white", paddingLeft: "20px", fontFamily:'Poppins' , fontSize:"30px", fontWeight:'700'}}
             >
-              Tech
+              <Link  style={{textDecoration:"none", color: "#fff"}} href="/">TECH</Link>
             </div>
           </Col>
           <Col xs={0} sm={0} md={10}>
             <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
-            <Menu.Item key="home"  >
-          <Link href="/">Home</Link>
-          
-        </Menu.Item>
+            
+        {session?.user && 
               <Menu.Item key="pc-builder">
           <Link href="/pc-builder">PC Builder</Link>
-        </Menu.Item>
+        </Menu.Item>}
         <Menu.SubMenu key="categories" title="Categories">
           <Menu.Item key="cpu">
             <Link href="/categories/cpu">CPU / Processor</Link>
@@ -81,19 +80,10 @@ const AppNavbar = () => {
     
 
         
-              {/* <Menu.Item key="4">
-                <Button type="primary" style={{ marginRight: "10px" }}>
-                  Sign in
-                </Button>
-                
-              </Menu.Item> */}
+             
             </Menu>
           </Col>
-          {/* <Col xs={20} sm={20} md={1}>
-          <Button type="primary" style={{ marginRight: "10px" }}>
-                  Sign in
-                </Button>
-          </Col> */}
+          
           <Col xs={2} sm={2} md={0}>
             <Button type="primary" onClick={showDrawer}>
               <MenuOutlined />
@@ -109,14 +99,11 @@ const AppNavbar = () => {
         >
           <Menu mode="vertical" defaultSelectedKeys={["1"]}>
             
-            <Menu.Item key="home">
-          <Link href="/">Home</Link>
-          
-        </Menu.Item>
-        <Menu.Item key="pc-builder">
+           
+          {session?.user && 
+              <Menu.Item key="pc-builder">
           <Link href="/pc-builder">PC Builder</Link>
-          
-        </Menu.Item>
+        </Menu.Item>}
         <Menu.SubMenu key="categories" title="Categories">
           <Menu.Item key="cpu">
             <Link href="/categories/cpu">CPU / Processor</Link>
@@ -140,12 +127,16 @@ const AppNavbar = () => {
             <Link href="/categories/others">Others</Link>
           </Menu.Item>
         </Menu.SubMenu>
-            <Menu.Item key="4">
-              <Button type="primary" style={{ marginRight: "10px" }}>
-                Sign in
-              </Button>
-             
-            </Menu.Item>
+        {session?.user ? <>
+          <Button type="primary" danger onClick={() => signOut()} style={{marginTop:'20px'   }}>
+            Logout
+          </Button>
+          <h2 style={{   }}>{session?.user?.name}</h2>
+          </>
+         : <Menu.Item key="login">
+          <Link href="/login">Login</Link>
+        </Menu.Item>}
+    
           </Menu>
         </Drawer>
 
