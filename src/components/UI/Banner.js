@@ -1,4 +1,4 @@
-import { Carousel, Col, Row } from 'antd';
+import { Button, Carousel, Col, Row } from 'antd';
 import {
     ArrowRightOutlined,
     CalendarOutlined,
@@ -7,48 +7,37 @@ import {
   } from "@ant-design/icons";
 import Image from 'next/image';
 import DrawingImage from  "@/assets/images/banner-1.jpg"
+import Link from 'next/link';
 
 
 
 const Banner = () => {
   return (
-    <div className='container-fluid'>
+    <div className='container-fluid' style={{}}>
 
 <Carousel autoplay>
-    <div >
+   
+<div >
     <Row>
         <Col
           lg={{
-            span: 8,
+            span: 12,
           }}
-        >
-          <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis rerum vitae possimus dignissimos ex. Fugit maxime necessitatibus ratione suscipit exercitationem!</h2>
+         >
+          <h4 style={{margin:"30px 0"}}>MANY OF US use computers every day, but never really get into the guts of how they work. Sometimes, it’s nice to make something with your own hands that you will  use every day</h4>
           
-          <p style={{ fontSize: "20px" }}>
-            Beauteous before up across felt sheepishly and more mournfully the
-            wow so more flustered and one up pushed salamander collective
-            blinked that iguanodon bid much some since hey far goodness jaguar
-            whil...
-          </p>
-          <p
-            style={{
-              fontSize: "20px",
-              margin: "20px 0px",
-              backgroundColor: "black",
-              color: "white",
-              width: "168px",
-              padding: "2px 5px ",
-              
-             
-            }}
-          >
-            Keep Reading <ArrowRightOutlined />
-          </p>
+         
+          <Link href="/pc-builder" style={{
+              textDecoration:"none", background:"#000", color:"#fff", padding:"10px",borderRadius:"5px",margin:"20px 0" 
+            }}>
+            PC BUILDER
+         
+          </Link>
         </Col>
 
         <Col
           lg={{
-            span: 16,
+            span: 12,
           }}
           
         >
@@ -56,40 +45,27 @@ const Banner = () => {
         </Col>
       </Row>
     </div>
-    <div >
+<div >
     <Row>
         <Col
           lg={{
-            span: 8,
+            span: 12,
           }}
-        >
-          <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis rerum vitae possimus dignissimos ex. Fugit maxime necessitatibus ratione suscipit exercitationem!</h2>
+         >
+          <h4 style={{margin:"30px 0"}}>MANY OF US use computers every day, but never really get into the guts of how they work. Sometimes, it’s nice to make something with your own hands that you will  use every day</h4>
           
-          <p style={{ fontSize: "20px" }}>
-            Beauteous before up across felt sheepishly and more mournfully the
-            wow so more flustered and one up pushed salamander collective
-            blinked that iguanodon bid much some since hey far goodness jaguar
-            whil...
-          </p>
-          <p
-            style={{
-              fontSize: "20px",
-              margin: "20px 0px",
-              backgroundColor: "black",
-              color: "white",
-              width: "168px",
-              padding: "2px 5px ",
-              
-             
-            }}
-          >
-            Keep Reading <ArrowRightOutlined />
-          </p>
+         
+          <Link href="/pc-builder" style={{
+              textDecoration:"none", background:"#000", color:"#fff", padding:"10px",borderRadius:"5px",margin:"20px 0" 
+            }}>
+            PC BUILDER
+         
+          </Link>
         </Col>
 
         <Col
           lg={{
-            span: 16,
+            span: 12,
           }}
           
         >
@@ -97,40 +73,27 @@ const Banner = () => {
         </Col>
       </Row>
     </div>
-    <div >
+<div >
     <Row>
         <Col
           lg={{
-            span: 8,
+            span: 12,
           }}
-        >
-          <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis rerum vitae possimus dignissimos ex. Fugit maxime necessitatibus ratione suscipit exercitationem!</h2>
+         >
+          <h4 style={{margin:"30px 0"}}>MANY OF US use computers every day, but never really get into the guts of how they work. Sometimes, it’s nice to make something with your own hands that you will  use every day</h4>
           
-          <p style={{ fontSize: "20px" }}>
-            Beauteous before up across felt sheepishly and more mournfully the
-            wow so more flustered and one up pushed salamander collective
-            blinked that iguanodon bid much some since hey far goodness jaguar
-            whil...
-          </p>
-          <p
-            style={{
-              fontSize: "20px",
-              margin: "20px 0px",
-              backgroundColor: "black",
-              color: "white",
-              width: "168px",
-              padding: "2px 5px ",
-              
-             
-            }}
-          >
-            Keep Reading <ArrowRightOutlined />
-          </p>
+         
+          <Link href="/pc-builder" style={{
+              textDecoration:"none", background:"#000", color:"#fff", padding:"10px",borderRadius:"5px",margin:"20px 0" 
+            }}>
+            PC BUILDER
+         
+          </Link>
         </Col>
 
         <Col
           lg={{
-            span: 16,
+            span: 12,
           }}
           
         >
@@ -138,6 +101,7 @@ const Banner = () => {
         </Col>
       </Row>
     </div>
+   
     
     
     

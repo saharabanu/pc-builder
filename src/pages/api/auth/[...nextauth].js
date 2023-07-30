@@ -18,7 +18,7 @@ export const authOptions = {
     // ...add more providers here
   ],
   pages: {
-    signIn: '/login'
+    signIn: 'https://pc-builder-sage.vercel.app/login'
   }
 }
 

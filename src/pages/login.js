@@ -16,10 +16,10 @@ const LoginPage = () => {
 
                 <div>
                 <Button type="primary" onClick={()=> signIn('google',{
-            callbackUrl: "http://localhost:3000/"
+            callbackUrl: "https://pc-builder-sage.vercel.app/"
           })}> <GoogleOutlined /> Google</Button>
                 <Button type="primary" style={{marginLeft:'5px'}} onClick={()=> signIn('github',{
-            callbackUrl: "http://localhost:3000/"
+            callbackUrl: "https://pc-builder-sage.vercel.app/"
           })}>  <GithubOutlined />Github</Button>
                 </div>
                 {/* //<LogoutOutlined /> */}
