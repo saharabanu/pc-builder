@@ -2,11 +2,13 @@ import RootLayout from '@/components/Layout/RootLayout';
 import Banner from '@/components/UI/Banner';
 import FeaturedCategories from '@/components/UI/FeaturedCategories';
 import FeaturedProduct from '@/components/UI/FeaturedProduct';
+import Heading from '@/components/UI/Heading';
 
 
 const HomePage = ({products}) => {
   return (
     <> 
+    <Heading title={"Home"} />
     <Banner/>
     <FeaturedProduct products={products}/>
     <FeaturedCategories/>
