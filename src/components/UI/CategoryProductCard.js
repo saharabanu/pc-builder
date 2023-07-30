@@ -3,7 +3,8 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import StarRatings from "react-star-ratings";
 import { useDispatch, useSelector } from "react-redux";
-import { addProductToBuilder } from "@/redux/features/builderSlice";
+import { addProductToBuilder, clearBuilder } from "@/redux/features/builderSlice";
+import swal from "sweetalert";
 const { Meta } = Card;
 
 const CategoryProductCard = ({ product }) => {
@@ -14,6 +15,7 @@ const CategoryProductCard = ({ product }) => {
   const averageRating = sumOfRatings / product?.Reviews.length;
 
   const router = useRouter();
+  // handle product details function
 
   const handleProductClick = () => {
     // Redirect the user to the product detail page when the card is clicked
@@ -22,6 +24,8 @@ const CategoryProductCard = ({ product }) => {
 
   const dispatch = useDispatch();
   const categoryState = useSelector((state) => state.builder.chooseSelectedCategory);
+
+/// handle add to product
 
   const handleAddProduct = (product) => {
     if (product.Category === "CPU/Processor") {
@@ -47,6 +51,8 @@ const CategoryProductCard = ({ product }) => {
       router.push("/pc-builder");
     }
   };
+
+ 
 
   return (
     <div className="container-fluid">

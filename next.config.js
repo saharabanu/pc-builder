@@ -5,10 +5,12 @@ const nextConfig = {
     domains: ["www.cloud.ryanscomputers.com","i.rtings.com","",
     "cdn.mos.cms.futurecdn.net",
     "c1.neweggimages.com",
-    "",
-    "",
-    "",
-    "",
+    "www.ultratech.com.bd",
+    "i.ytimg.com",
+    "www.ubuy.com.bd",
+    "trusttechbd.com",
+    "pcper.com",
+    "www.pchouse.com.bd",
       
       
       
