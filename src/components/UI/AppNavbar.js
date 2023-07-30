@@ -40,11 +40,13 @@ const AppNavbar = () => {
           </Col>
           <Col xs={0} sm={0} md={10}>
             <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
-            
-        {session?.user && 
+            <Menu.Item key="pc-builder">
+          <Link href="/pc-builder">PC Builder</Link>
+        </Menu.Item>
+        {/* {session?.user && 
               <Menu.Item key="pc-builder">
           <Link href="/pc-builder">PC Builder</Link>
-        </Menu.Item>}
+        </Menu.Item>} */}
         <Menu.SubMenu key="categories" title="Categories">
           <Menu.Item key="cpu">
             <Link href="/categories/cpu">CPU / Processor</Link>

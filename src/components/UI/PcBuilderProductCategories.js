@@ -1,5 +1,7 @@
 import { Button, Col, Row } from "antd";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { useDispatch, useSelector } from "react-redux";
 
 const categories = [
   {
@@ -39,6 +41,32 @@ const categories = [
   },
 ];
 const PcBuilderProductCategories = () => {
+const dispatch = useDispatch();
+const router = useRouter();
+  const builderState = useSelector((state) => state.builder.selectedProducts);
+  const handleChooseClick = (redirectUri, title) => {
+    router.push(redirectUri);
+    dispatch(chooseSelectCategory(title));
+  };
+
+
+  const showChoosedProduct = (category) => {
+    if (category === "CPU") {
+      return builderState["cpu"];
+    } else if (category === "RAM") {
+      return builderState["ram"];
+    } else if (category === "Monitor") {
+      return builderState["monitor"];
+    } else if (category === "Motherboard") {
+      return builderState["motherboard"];
+    } else if (category === "Storage Device") {
+      return builderState["storage"];
+    } else if (category === "Power Supply Unit") {
+      return builderState["powersupply"];
+    } else if (category === "Others") {
+      return builderState["others"];
+    }
+  };
   return (
     <div>
       <Row gutter={[8, 8]}>
@@ -64,7 +92,7 @@ const PcBuilderProductCategories = () => {
                   <p style={{ marginLeft: "10px" }}> {category?.title}</p>
                 </div>
                 <div>
-                    <Button>Choose</Button>
+                    <Button onClick={()=> handleChooseClick(category?.href, category?.title)}>Choose</Button>
                 </div>
               </div>
             </div>
