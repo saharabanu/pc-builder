@@ -7,7 +7,7 @@ const FeaturedProduct = ({products}) => {
     <div className="container-fluid">
 
     <div style={{display:"flex", justifyContent:'center', alignItems:"center", padding:'10px 0px', fontWeight:'bold'}}>
-        <h2>Featured Products</h2>
+        <h2 style={{color:"#764ABC", fontWeight:"bold", paddingBottom:"10px"}}>Featured Products</h2>
     </div>
 
 

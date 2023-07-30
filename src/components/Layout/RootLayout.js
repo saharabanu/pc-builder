@@ -15,7 +15,13 @@ const RootLayout = ({children}) => {
     <>
 
     <Layout  >
-    <Header >
+    <Header  className='navbar' style={{
+      position: 'fixed',
+      zIndex: 1,
+      width: '100%',
+      backgroundColor: '#fff',
+      
+    }}>
     
       <AppNavbar/>
     </Header>

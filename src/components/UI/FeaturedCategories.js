@@ -46,7 +46,7 @@ const FeaturedCategories = () => {
     <div className="container-fluid">
 
 <div style={{textAlign:"center",padding:"40px 10px"}}>
-<h2>Featured Categories</h2>
+<h2 style={{color:"#764ABC",}}>Featured Categories</h2>
     </div>
 
 

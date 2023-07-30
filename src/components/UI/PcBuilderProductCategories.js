@@ -55,7 +55,6 @@ const PcBuilderProductCategories = () => {
 
   // handle show product function
   const showChoosedProduct = (category) => {
-    console.log('clicked')
     if (category === "CPU") {
       return builderState["cpu"];
     } else if (category === "RAM") {
